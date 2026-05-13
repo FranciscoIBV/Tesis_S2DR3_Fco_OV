@@ -117,48 +117,8 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     .fullscreen-wrapper:fullscreen .plot-close-btn {
       display: block;
     }
-
-    .fullscreen-container {
-      width: 100vw;
-      height: 100vh;
-      background-color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .fullscreen-container img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .fullscreen-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .fullscreen-close-btn-custom {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 2147483647;
-      padding: 12px 24px;
-      background-color: #f44336;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-
-    .fullscreen-close-btn-custom:hover {
-      background-color: #da190b;
-    }
   </style></head>
-  <body id="iuqf" class="gjs-t-body font-body modal-open"><div id="i587z" class="page-wrapper"><header id="iaa18" class="dashboard-header" style="z-index: 2000; position: sticky;"><div id="iju27" clas[...]
+  <body id="iuqf" class="gjs-t-body font-body modal-open"><div id="i587z" class="page-wrapper"><header id="iaa18" class="dashboard-header" style="z-index: 2000; position: sticky;"><div id="iju27" class="header-inner"><div id="ir0ee" class="header-title-row"><div id="i31b9" class="title-group"><span id="imm67" class="header-eyebrow">Apéndice tesis s2dr3&nbsp;</span><h1 id="i7xbw" class="gjs-t-h1 font-display">Interfaz de resultados</h1><p id="icfxk" class="header-description">Panel de control para la inspección visual y cuantitativa de los resultados obtenidos en la investigación</p></div></div><div id="i1iaa" class="filter-bar"><label id="izuyf" class="filter-field"><span id="iv6jv" class="filter-label">Imagen</span><select type="text" id="imagen" class="custom-select gjs-t-border image-select"><option value="0">Imagen 1</option></select></label><label id="irymh" class="filter-field"><span id="ii5px" class="filter-label">Comparación</span><select type="text" id="tipo" class="custom-select gjs-t-border type-select"><option value="S2" id="is50l">S2 vs S2DR3</option><option value="PS" id="iy4vn">PS vs S2DR3</option></select></label><label id="ij77r" class="filter-field"><span id="ig9x9" class="filter-label">Banda</span><select type="text" id="banda" class="custom-select gjs-t-border band-select"><option value="B02">B02</option><option value="B03">B03</option><option value="B04">B04</option></select></label><label id="iy6xi" class="filter-field"><span id="inm0l" class="filter-label">Métrica</span><select type="text" id="stat_type" class="custom-select gjs-t-border stats-select"><option value="R" id="iw6pj">R</option><option value="R2" id="i6zxm">R2</option><option value="RMSE" id="i7iei">RMSE</option><option value="MAE" id="iupen">MAE</option><option value="umbral" id="i8mk3">Umbral</option></select></label></div></div></header><main id="iv4mp" class="main-content"><section id="ihzlj" class="stats-grid"><article id="ir5ff" class="panel-shadow gjs-t-border map-card"><div id="iv4c3" class="card-header"><div id="i5vef" class="header-text"><h2 id="i2d9o" class="gjs-t-h2 section-title">Mapa</h2><p id="iy8b9" class="section-subtitle">Ubicación de la escena seleccionada</p></div><span id="iiy8l" class="status-badge">Activo</span></div><div id="map" class="map-canvas leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative; height: 400px;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-205.052px, -27px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 14; transform: translate3d(-11059px, -8798px, 0px) scale(16);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://c.tile.openstreetmap.fr/hot/8/127/127.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(77px, -30px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.fr/hot/8/128/127.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(333px, -30px, 0px); opacity: 1;"><img alt="" src="https://a.tile.openstreetmap.fr/hot/8/127/128.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(77px, 226px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.fr/hot/8/128/128.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(333px, 226px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.fr/hot/8/126/127.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-179px, -30px, 0px); opacity: 1;"><img alt="" src="https://b.tile.openstreetmap.fr/hot/8/129/127.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(589px, -30px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.fr/hot/8/126/128.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-179px, 226px, 0px); opacity: 1;"><img alt="" src="https://c.tile.openstreetmap.fr/hot/8/129/128.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(589px, 226px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(333px, 226px, 0px);"></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="Marker" tabindex="0" role="button" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(333px, 226px, 0px); z-index: 226;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"><div class="leaflet-popup  leaflet-zoom-animated" style="opacity: 1; transform: translate3d(334px, 192px, 0px); bottom: -7px; left: -52px;"><div class="leaflet-popup-content-wrapper"><div class="leaflet-popup-content" style="width: 57px;"><strong>Imagen 1</strong><br></div></div><div class="leaflet-popup-tip-container"><div class="leaflet-popup-tip"></div></div><a class="leaflet-popup-close-button" role="button" aria-label="Close popup" href="#close"><span aria-hidden="true">×</span></a></div></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(32767.6px, 32768px, 0px) scale(128);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div></div><div id="irf1g" class="map-footer"><div id="ifmdk" class="meta-item"><div id="iit17" class="meta-label">Latitud</div><div id="meta_lat" class="meta-value">0.0000</div></div><div id="imxj8" class="meta-item"><div id="i2ra3" class="meta-label">Longitud</div><div id="meta_lon" class="meta-value">0.0000</div></div></div></article><article id="ircpr" class="panel-shadow gjs-t-border reference-card"><div id="i6yiq" class="card-header"><div id="idsnh" class="header-text"><h2 id="i1zjv" class="gjs-t-h2 section-title">Imagen de referencia</h2><p id="i0fzl" class="section-subtitle">Vista principal de la escena analizada</p></div><button type="button" id="open_ref" class="gjs-t-button open-media-button ai-style-change-1" style="flex-direction: row;"><img src="https://api.iconify.design/lucide-expand.svg?color=white" alt="" id="ijf8g" class="button-icon ai-style-change-2" style="margin: 0px; flex-shrink: 0;"><span id="im59p8" style="width: auto;" class="ai-style-change-3">Abrir</span></button></div><div id="iqitgj" class="media-frame reference-media-wrapper"><img src="https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_1/Imagen_referencia.png" alt="Imagen de referencia" id="ref" class="fade-item reference-image"></div><div id="ixyvex" class="reference-footer"><div id="i1gzgd" class="meta-item"><div id="isfqc3" class="meta-label">Escena</div><div id="meta_scene" class="meta-value">Imagen 1</div></div><div id="i6jzat" class="meta-item"><div id="i5ddgy" class="meta-label">Fecha</div><div id="meta_date" class="meta-value"></div></div></div></article><article id="ir55fe" class="panel-shadow gjs-t-border results-card"><div id="imrolf" class="card-header"><div id="iwleu2" class="header-text"><h2 id="i8gsnb" class="gjs-t-h2 section-title">Resultados generales</h2><p id="i23hdk" class="section-subtitle">Violin-plots según la métrica elegida</p></div><button type="button" id="open_stats" class="open-media-button"><img src="https://api.iconify.design/lucide-search.svg?color=%23334155" alt="" id="iwlr4l" class="button-icon"><span id="imreig">Ver detalle</span></button></div><div id="i54x41" class="stats-summary"><div id="i7yp9c" class="summary-item"><div id="i1dg0f" class="summary-label">Tipo</div><div id="meta_type" class="summary-value">S2 vs S2DR3</div></div><div id="iqonic" class="summary-item"><div id="isk3yv" class="summary-label">Banda</div><div id="meta_band" class="summary-value">B04</div></div><div id="igh3mo" class="summary-item"><div id="ioc4yx" class="summary-label">Métrica</div><div id="meta_metric" class="summary-value">umbral</div></div></div><div id="i9hxx2" class="media-frame stats-media-wrapper"><img src="https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Analisis_General_Imagenes_S2DR3vsS2/Violinplot_Porcentaje_dentro_umbral.png" alt="Resultados generales" id="stats_img" class="fade-item stats-image"><button class="fullscreen-close-btn" title="Cerrar pantalla completa">×</button></div></article></section><section id="io7m3q" class="charts-grid"><article id="in2yp6" class="panel-shadow gjs-t-border chart-card"><div id="im4gwl" class="card-header"><div id="ijjm5q" class="header-text"><h2 id="ia8t5l" class="section-title" style="font-size: 18px; line-height: 26px;">Diagrama de dispersión</h2><p id="iq751i" class="section-subtitle">Relacion entre la reflectancia de los pixeles Sentinel-2 vs las celdas S2DR3.</p></div><button type="button" id="open_hex" class="open-media-button"><span id="i3f32v">Abrir</span></button></div><div id="i6327a" class="media-frame chart-media-wrapper"><img src="https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_1/Resultado_analisis_S2vsS2DR3/Graficos_Densidad/Densidad_Hex_Banda_B04_Rojo.png" alt="Gráfico hexbin" id="hex" class="fade-item hex-image" style="cursor: pointer;"></div></article><article id="ilt3hl" class="panel-shadow gjs-t-border chart-card"><div id="ibt84h" class="card-header"><div id="isz9mo" class="header-text"><h2 id="igt283" class="section-title"><span data-gs-mrk-fs="true" id="ikqbki">Coherencia radiometrica</span></h2><p id="iayuoj" class="section-subtitle"><span data-gs-mrk-fs="true" id="in3hgh">Comparación de reflectancias; píxeles dentro del umbral definido representan consistencia radiométrica entre imagen original y S2DR3.</span></p></div><button type="button" id="open_error" class="open-media-button" style="align-self: center;"><span id="itd02p">Abrir</span></button></div><div id="ib9y5h" class="media-frame chart-media-wrapper"><img src="https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_1/Resultado_analisis_S2vsS2DR3/Graficos_filtrados/Banda_error_Banda_B04_Rojo.png" alt="Mapa de error" id="error" class="fade-item error-image"></div></article><article id="ihzc8g" class="panel-shadow gjs-t-border chart-card"><div id="ij4a1a" class="card-header"><div id="iu72uv" class="header-text"><h2 id="i8hvqv" class="section-title" style="font-size: 18px; line-height: 26px;">Diagrama de dispersión 3D</h2><p id="i1qpbu" class="section-subtitle">Grafico interacitvo para visualizar la densidad de la relacion entre los pixeles.</p></div><button type="button" id="open_plot" class="open-media-button"><span id="i75nq1">Abrir</span></button></div><div id="i1dy1t" class="media-frame iframe-wrapper"></div><div class="fullscreen-wrapper"><iframe frameborder="0" title="Plot interactivo" loading="lazy" id="plot" class="fade-item plot-iframe" src="https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_1/Resultado_analisis_S2vsS2DR3/Graficos_3D/Densidad3D_Puntos_Banda_B04_Rojo.html"></iframe><button class="plot-close-btn">Cerrar Pantalla Completa</button></div><button class="plot-close-btn">Cerrar Pantalla Completa</button></article></section><section id="il8zwn" class="panel-shadow gjs-t-border table-section" style="display: none;"><div id="inl23m" class="section-header"><div id="iiy7rk" class="header-text"><h2 id="igpqjc" class="gjs-t-h2 section-title">Resumen tabular</h2><p id="i0vfcv" class="section-subtitle">Métricas clave y metadatos asociados a la escena actual.</p></div><div id="i1tmsl" class="legend-group"><span id="iu8lf1" class="legend-item"><span id="i5zf2i" class="legend-dot"></span> Valor principal</span><span id="is1jd7" class="legend-item"><span id="ih6nzg" class="legend-dot"></span> Metadato auxiliar</span></div></div><div id="tabla" class="table-scroll data-table-wrapper">
         <table data-gjs-name="Data Table" class="min-w-full border-separate border-spacing-0 text-left">
           <thead data-gjs-name="Table Head" class="sticky top-0 z-10 bg-slate-100">
             <tr data-gjs-name="Table Row">
@@ -220,7 +180,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
               </tr>
           </tbody>
         </table>
-      </div></section></main><div id="modal" class="media-modal flex"><div id="iss0ri" class="modal-frame"><div id="iconth" class="modal-header"><div id="isshoz" class="modal-title-group"><h2 id="moda[...]
+      </div></section></main><div id="modal" class="media-modal flex"><div id="iss0ri" class="modal-frame"><div id="iconth" class="modal-header"><div id="isshoz" class="modal-title-group"><h2 id="modal_title" class="modal-title">Plot interactivo</h2><p id="im1561" class="modal-subtitle">Haz clic fuera del cuadro o usa cerrar para volver.</p></div><button type="button" id="close_modal" class="close-modal-button"><img src="https://api.iconify.design/lucide-x.svg?color=%23334155" alt="" id="io76ei" class="button-icon"><span id="idtje6">Cerrar</span></button></div><div id="modal_content" class="modal-content"><iframe data-gjs-name="Modal Iframe" src="https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_1/Resultado_analisis_S2vsS2DR3/Graficos_3D/Densidad3D_Puntos_Banda_B04_Rojo.html" title="Plot interactivo" class="h-[78vh] w-full rounded-2xl bg-white" style="cursor: pointer;"></iframe></div></div></div></div><script id="i7ncww">
     const fallbackCatalog = [
       {
         id: "Escena Norte",
@@ -499,66 +459,61 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
       updateTable(scene, band, type, metric);
     }
 
-    function openFullscreen(src, isImage = true) {
+function attachMediaOpeners() {
+  function openImage(title, src, alt) {
+    modalTitle.textContent = title;
+    const imgContainer = document.createElement("div");
+    imgContainer.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain" style="cursor: pointer;">`;
+    const img = imgContainer.querySelector("img");
+    
+    img.addEventListener("click", () => {
       const fullscreenElement = document.createElement("div");
       fullscreenElement.className = "fullscreen-container";
-      
-      if (isImage) {
-        fullscreenElement.innerHTML = `<img src="${src}" alt="Imagen en pantalla completa" style="cursor: pointer;">`;
-        fullscreenElement.querySelector("img").addEventListener("click", exitFullscreen);
-      } else {
-        fullscreenElement.innerHTML = `<iframe src="${src}" title="Contenido" style="border: none;"></iframe>`;
-        fullscreenElement.querySelector("iframe").addEventListener("click", exitFullscreen);
-      }
-      
+      fullscreenElement.innerHTML = `<img src="${src}" alt="${alt || title}" style="cursor: pointer;">`;
+      fullscreenElement.querySelector("img").addEventListener("click", () => {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+      });
       document.body.appendChild(fullscreenElement);
-      
       fullscreenElement.requestFullscreen().catch(err => {
         fullscreenElement.remove();
         console.error("No se pudo activar pantalla completa:", err);
       });
-    }
+    });
+    
+    modalContent.innerHTML = "";
+    modalContent.appendChild(imgContainer);
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("modal-open");
+  }
 
-    function exitFullscreen() {
-      if (document.fullscreenElement) {
-        document.exitFullscreen().then(() => {
-          const fsContainer = document.querySelector(".fullscreen-container");
-          if (fsContainer) fsContainer.remove();
-        });
-      }
-    }
-
-    function attachMediaOpeners() {
-      function openImage(title, src, alt) {
-        modalTitle.textContent = title;
-        const imgContainer = document.createElement("div");
-        imgContainer.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain" style="cursor: pointer;">`;
-        const img = imgContainer.querySelector("img");
-        
-        img.addEventListener("click", () => {
-          openFullscreen(src, true);
-        });
-        
-        modalContent.innerHTML = "";
-        modalContent.appendChild(imgContainer);
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-        document.body.classList.add("modal-open");
-      }
-
-      function openFrame(title, src) {
-        modalTitle.textContent = title;
-        modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white" style="cursor: pointer;"></iframe>`;
-        const iframe = modalContent.querySelector("iframe");
-        
-        iframe.addEventListener("click", () => {
-          openFullscreen(src, false);
-        });
-        
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-        document.body.classList.add("modal-open");
-      }
+  function openFrame(title, src) {
+    modalTitle.textContent = title;
+    modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white" style="cursor: pointer;"></iframe>`;
+    const iframe = modalContent.querySelector("iframe");
+    
+    iframe.addEventListener("click", () => {
+      const fullscreenElement = document.createElement("div");
+      fullscreenElement.className = "fullscreen-container";
+      fullscreenElement.innerHTML = `<iframe src="${src}" title="${title}" style="border: none;"></iframe>`;
+      fullscreenElement.querySelector("iframe").addEventListener("click", () => {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+      });
+      document.body.appendChild(fullscreenElement);
+      fullscreenElement.requestFullscreen().catch(err => {
+        fullscreenElement.remove();
+        console.error("No se pudo activar pantalla completa:", err);
+      });
+    });
+    
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("modal-open");
+  }
 
       document.getElementById("open_ref").addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
       document.getElementById("open_stats").addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
@@ -617,6 +572,4 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
       .catch(() => startApp(fallbackCatalog));
   </script>
 
-<veepn-lock-screen><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extens[...]
-
-</body></html>
+<veepn-lock-screen><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-lock-screen></body></html>
