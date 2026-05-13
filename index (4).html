@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head id="i2ag">
+    <title id="izptg">Interfaz de resultados</title>
+  <meta charset="UTF-8" id="izpc"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" id="iqvql"/>
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <link rel="preconnect" href="https://fonts.googleapis.com" id="ier7u"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" id="i885m"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Fraunces:wght@600;700&amp;display=swap" rel="stylesheet" id="ikicg"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" id="i0tzm"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js" id="idol1"></script>
+  <link rel="stylesheet" href="./style.css">
+  </head>
+  <body id="iuqf" class="gjs-t-body font-body"><div id="i587z" class="page-wrapper"><header id="iaa18" class="dashboard-header"><div id="iju27" class="header-inner"><div id="ir0ee" class="header-title-row"><div id="i31b9" class="title-group"><span id="imm67" class="header-eyebrow">Apéndice tesis s2dr3 </span><h1 id="i7xbw" class="gjs-t-h1 font-display">Interfaz de resultados</h1><p id="icfxk" class="header-description">Explora imágenes de referencia, métricas comparativas, gráficos de dispersión y resumen tabular.</p></div><a href="##" id="i3pg7" class="gjs-t-link gjs-t-border header-link"><img src="https://api.iconify.design/lucide-layout-dashboard.svg?color=%23334155" alt="" id="isuua" class="link-icon"/><span id="im7ah">Vista del proyecto</span></a></div><div id="i1iaa" class="filter-bar"><label id="izuyf" class="filter-field"><span id="iv6jv" class="filter-label">Imagen</span><select type="text" id="imagen" class="custom-select gjs-t-border image-select"><option value="opt1" id="ibsqa">Option 1</option><option value="opt2" id="i2sxy">Option 2</option></select></label><label id="irymh" class="filter-field"><span id="ii5px" class="filter-label">Comparación</span><select type="text" id="tipo" class="custom-select gjs-t-border type-select"><option value="S2" id="is50l">S2 vs S2DR3</option><option value="PS" id="iy4vn">PS vs S2DR3</option></select></label><label id="ij77r" class="filter-field"><span id="ig9x9" class="filter-label">Banda</span><select type="text" id="banda" class="custom-select gjs-t-border band-select"><option value="opt1" id="it13j">Option 1</option><option value="opt2" id="iwfu7">Option 2</option></select></label><label id="iy6xi" class="filter-field"><span id="inm0l" class="filter-label">Métrica</span><select type="text" id="stat_type" class="custom-select gjs-t-border stats-select"><option value="R" id="iw6pj">R</option><option value="R2" id="i6zxm">R2</option><option value="RMSE" id="i7iei">RMSE</option><option value="MAE" id="iupen">MAE</option><option value="umbral" id="i8mk3">Umbral</option></select></label></div></div></header><main id="iv4mp" class="main-content"><section id="ihzlj" class="stats-grid"><article id="ir5ff" class="panel-shadow gjs-t-border map-card"><div id="iv4c3" class="card-header"><div id="i5vef" class="header-text"><h2 id="i2d9o" class="gjs-t-h2 section-title">Mapa</h2><p id="iy8b9" class="section-subtitle">Ubicación de la escena seleccionada</p></div><span id="iiy8l" class="status-badge">Activo</span></div><div id="map" class="map-canvas"></div><div id="irf1g" class="map-footer"><div id="ifmdk" class="meta-item"><div id="iit17" class="meta-label">Latitud</div><div id="meta_lat" class="meta-value">-</div></div><div id="imxj8" class="meta-item"><div id="i2ra3" class="meta-label">Longitud</div><div id="meta_lon" class="meta-value">-</div></div></div></article><article id="ircpr" class="panel-shadow gjs-t-border reference-card"><div id="i6yiq" class="card-header"><div id="idsnh" class="header-text"><h2 id="i1zjv" class="gjs-t-h2 section-title">Imagen de referencia</h2><p id="i0fzl" class="section-subtitle">Vista principal de la escena analizada</p></div><button type="button" id="open_ref" class="gjs-t-button open-media-button"><img src="https://api.iconify.design/lucide-expand.svg?color=white" alt="" id="ijf8g" class="button-icon"/><span id="im59p8">Ampliar</span></button></div><div id="iqitgj" class="media-frame reference-media-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwwLDAsMC4xNSk7IHRyYW5zZm9ybTogc2NhbGUoMC43NSkiPgogICAgICAgIDxwYXRoIGQ9Ik04LjUgMTMuNWwyLjUgMyAzLjUtNC41IDQuNSA2SDVtMTYgMVY1YTIgMiAwIDAgMC0yLTJINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMnoiPjwvcGF0aD4KICAgICAgPC9zdmc+" alt="Imagen de referencia" id="ref" class="fade-item reference-image"/></div><div id="ixyvex" class="reference-footer"><div id="i1gzgd" class="meta-item"><div id="isfqc3" class="meta-label">Escena</div><div id="meta_scene" class="meta-value">-</div></div><div id="i6jzat" class="meta-item"><div id="i5ddgy" class="meta-label">Fecha</div><div id="meta_date" class="meta-value">-</div></div></div></article><article id="ir55fe" class="panel-shadow gjs-t-border results-card"><div id="imrolf" class="card-header"><div id="iwleu2" class="header-text"><h2 id="i8gsnb" class="gjs-t-h2 section-title">Resultados generales</h2><p id="i23hdk" class="section-subtitle">Violin-plots según la métrica elegida</p></div><button type="button" id="open_stats" class="open-media-button"><img src="https://api.iconify.design/lucide-search.svg?color=%23334155" alt="" id="iwlr4l" class="button-icon"/><span id="imreig">Ver detalle</span></button></div><div id="i54x41" class="stats-summary"><div id="i7yp9c" class="summary-item"><div id="i1dg0f" class="summary-label">Tipo</div><div id="meta_type" class="summary-value">-</div></div><div id="iqonic" class="summary-item"><div id="isk3yv" class="summary-label">Banda</div><div id="meta_band" class="summary-value">-</div></div><div id="igh3mo" class="summary-item"><div id="ioc4yx" class="summary-label">Métrica</div><div id="meta_metric" class="summary-value">-</div></div></div><div id="i9hxx2" class="media-frame stats-media-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwwLDAsMC4xNSk7IHRyYW5zZm9ybTogc2NhbGUoMC43NSkiPgogICAgICAgIDxwYXRoIGQ9Ik04LjUgMTMuNWwyLjUgMyAzLjUtNC41IDQuNSA2SDVtMTYgMVY1YTIgMiAwIDAgMC0yLTJINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMnoiPjwvcGF0aD4KICAgICAgPC9zdmc+" alt="Resultados generales" id="stats_img" class="fade-item stats-image"/></div></article></section><section id="io7m3q" class="charts-grid"><article id="in2yp6" class="panel-shadow gjs-t-border chart-card"><div id="im4gwl" class="card-header"><div id="ijjm5q" class="header-text"><h2 id="ia8t5l" class="section-title">Hexbin</h2><p id="iq751i" class="section-subtitle">Relacion entre la reflectancia de los pixeles Sentinel-2 vs las celdas S2DR3.</p></div><button type="button" id="open_hex" class="open-media-button"><span id="i3f32v">Abrir</span></button></div><div id="i6327a" class="media-frame chart-media-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwwLDAsMC4xNSk7IHRyYW5zZm9ybTogc2NhbGUoMC43NSkiPgogICAgICAgIDxwYXRoIGQ9Ik04LjUgMTMuNWwyLjUgMyAzLjUtNC41IDQuNSA2SDVtMTYgMVY1YTIgMiAwIDAgMC0yLTJINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMnoiPjwvcGF0aD4KICAgICAgPC9zdmc+" alt="Gráfico hexbin" id="hex" class="fade-item hex-image"/></div></article><article id="ilt3hl" class="panel-shadow gjs-t-border chart-card"><div id="ibt84h" class="card-header"><div id="isz9mo" class="header-text"><h2 id="igt283" class="section-title"><span data-gs-mrk-fs="true" id="ikqbki">Coherencia radiometrica</span></h2><p id="iayuoj" class="section-subtitle"><span data-gs-mrk-fs="true" id="in3hgh">Comparación de reflectancias; píxeles dentro del umbral definido representan consistencia radiométrica entre imagen original y S2DR3.</span></p></div><button type="button" id="open_error" class="open-media-button"><span id="itd02p">Abrir</span></button></div><div id="ib9y5h" class="media-frame chart-media-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwwLDAsMC4xNSk7IHRyYW5zZm9ybTogc2NhbGUoMC43NSkiPgogICAgICAgIDxwYXRoIGQ9Ik04LjUgMTMuNWwyLjUgMyAzLjUtNC41IDQuNSA2SDVtMTYgMVY1YTIgMiAwIDAgMC0yLTJINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMnoiPjwvcGF0aD4KICAgICAgPC9zdmc+" alt="Mapa de error" id="error" class="fade-item error-image"/></div></article><article id="ihzc8g" class="panel-shadow gjs-t-border chart-card"><div id="ij4a1a" class="card-header"><div id="iu72uv" class="header-text"><h2 id="i8hvqv" class="section-title">Scatterplot 3D</h2><p id="i1qpbu" class="section-subtitle"><br id="ie07ov"/></p></div><button type="button" id="open_plot" class="open-media-button"><span id="i75nq1">Abrir</span></button></div><div id="i1dy1t" class="media-frame iframe-wrapper"></div><iframe frameborder="0" title="Plot interactivo" loading="lazy" id="plot" class="fade-item plot-iframe"></iframe></article></section><section id="il8zwn" class="panel-shadow gjs-t-border table-section"><div id="inl23m" class="section-header"><div id="iiy7rk" class="header-text"><h2 id="igpqjc" class="gjs-t-h2 section-title">Resumen tabular</h2><p id="i0vfcv" class="section-subtitle">Métricas clave y metadatos asociados a la escena actual.</p></div><div id="i1tmsl" class="legend-group"><span id="iu8lf1" class="legend-item"><span id="i5zf2i" class="legend-dot"></span> Valor principal</span><span id="is1jd7" class="legend-item"><span id="ih6nzg" class="legend-dot"></span> Metadato auxiliar</span></div></div><div id="tabla" class="table-scroll data-table-wrapper"></div></section></main><div id="modal" class="media-modal"><div id="iss0ri" class="modal-frame"><div id="iconth" class="modal-header"><div id="isshoz" class="modal-title-group"><h2 id="modal_title" class="modal-title">Vista ampliada</h2><p id="im1561" class="modal-subtitle">Haz clic fuera del cuadro o usa cerrar para volver.</p></div><button type="button" id="close_modal" class="close-modal-button"><img src="https://api.iconify.design/lucide-x.svg?color=%23334155" alt="" id="io76ei" class="button-icon"/><span id="idtje6">Cerrar</span></button></div><div id="modal_content" class="modal-content"></div></div></div></div><script id="i7ncww">
+    const fallbackCatalog = [
+      {
+        id: "Escena Norte",
+        date: "2024-02-11",
+        lat: -33.45,
+        lon: -70.67,
+        reference: "https://app.grapesjs.com/api/assets/random-image?query=satellite%20farmland%20patchwork&w=900&h=700",
+        bands: {
+          B02: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=scientific%20heatmap%20blue&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=data%20heatmap%20cyan&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=error%20map%20orange&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=terrain%20error%20analysis&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=threshold%20map%20science&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=hexbin%20analysis%20chart&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=remote%20sensing%20error%20plot&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=scientific%20scatter%20blue&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=correlation%20dashboard%20teal&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=analytics%20surface%20orange&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=quantitative%20surface%20chart&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=threshold%20classification%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=hexagonal%20scientific%20visualization&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=distribution%20error%20diagram&w=900&h=600",
+              plot: "https://example.com"
+            }
+          },
+          B03: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=green%20spectral%20analysis&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=statistical%20field%20map&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=residual%20landscape%20map&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=agro%20analytics%20result&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=classification%20zones%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=geospatial%20hexbin%20green&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=error%20density%20green&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=planet%20sensor%20comparison&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=regression%20map%20green&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=rmse%20cartography&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=mae%20analysis%20map&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=threshold%20science%20green&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=green%20hexbin%20stats&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=green%20error%20visual&w=900&h=600",
+              plot: "https://example.com"
+            }
+          }
+        }
+      },
+      {
+        id: "Escena Sur",
+        date: "2024-05-28",
+        lat: -36.82,
+        lon: -73.05,
+        reference: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20satellite%20imagery&w=900&h=700",
+        bands: {
+          B04: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=red%20band%20analysis%20map&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=red%20correlation%20surface&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=marine%20rmse%20map&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=marine%20mae%20map&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20threshold%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=red%20hexbin%20coast&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=marine%20error%20chart&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20regression%20dashboard&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20correlation%20map&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20rmse%20dashboard&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20mae%20dashboard&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20threshold%20dashboard&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20hexagonal%20analysis&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=ocean%20error%20density&w=900&h=600",
+              plot: "https://example.com"
+            }
+          },
+          B08: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=nir%20analysis%20remote%20sensing&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=nir%20correlation%20map&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20rmse%20surface&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20mae%20surface&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=nir%20threshold%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=nir%20hexbin%20scientific&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=nir%20residual%20distribution&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20analysis&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20correlation&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20rmse&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20mae&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20threshold&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=infrared%20hexbin%20chart&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=infrared%20error%20chart&w=900&h=600",
+              plot: "https://example.com"
+            }
+          }
+        }
+      }
+    ];
+
+    let catalogo = [];
+    let map;
+    let currentMarker = null;
+
+    const selImg = document.getElementById("imagen");
+    const selTipo = document.getElementById("tipo");
+    const selBanda = document.getElementById("banda");
+    const selStat = document.getElementById("stat_type");
+    const refImg = document.getElementById("ref");
+    const statsImg = document.getElementById("stats_img");
+    const hexImg = document.getElementById("hex");
+    const errorImg = document.getElementById("error");
+    const plotFrame = document.getElementById("plot");
+    const tabla = document.getElementById("tabla");
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modal_content");
+    const modalTitle = document.getElementById("modal_title");
+
+    function fadeUpdate(element, newSrc) {
+      element.classList.add("fade-out");
+      setTimeout(() => {
+        if (element.tagName === "IFRAME") {
+          element.src = newSrc || "";
+        } else {
+          element.src = newSrc || "";
+        }
+        element.classList.remove("fade-out");
+      }, 180);
+    }
+
+    function initMap() {
+      map = L.map('map', { zoomControl: true }).setView([-35, -71], 5);
+      L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+    }
+
+    function fillImageSelect() {
+      selImg.innerHTML = "";
+      catalogo.forEach((item, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = item.id;
+        selImg.appendChild(option);
+      });
+    }
+
+    function fillBandSelect() {
+  const scene = currentScene();
+  const type = selTipo.value;
+
+  selBanda.innerHTML = "";
+
+  const bandKeys = Object.keys(scene.bands || {});
+
+  bandKeys.forEach(band => {
+    const bandData = scene.bands[band];
+
+    if (bandData.comparisons && bandData.comparisons[type]) {
+      const option = document.createElement("option");
+      option.value = band;
+      option.textContent = band.replaceAll("_", " ");
+      selBanda.appendChild(option);
+    }
+  });
+}
+
+    function currentScene() {
+      return catalogo[Number(selImg.value)] || catalogo[0];
+    }
+
+    function currentPayload() {
+  const scene = currentScene();
+  const band = selBanda.value;
+  const type = selTipo.value;
+  const metric = selStat.value;
+
+  const bandData = scene?.bands?.[band];
+  const typeData = bandData?.comparisons?.[type];
+
+  return { scene, band, type, metric, bandData, typeData };
+}
+
+    function updateMap(scene) {
+      const lat = scene.lat;
+      const lon = scene.lon;
+      document.getElementById("meta_lat").textContent = lat.toFixed(4);
+      document.getElementById("meta_lon").textContent = lon.toFixed(4);
+
+      if (currentMarker) {
+        map.removeLayer(currentMarker);
+      }
+
+      currentMarker = L.marker([lat, lon]).addTo(map);
+      currentMarker.bindPopup(`<strong>${scene.id}</strong><br>${scene.date}`).openPopup();
+      map.setView([lat, lon], 8);
+      setTimeout(() => map.invalidateSize(), 250);
+    }
+
+    function updateTable(scene, band, type, metric) {
+      const rows = [
+        ["Escena", scene.id, "Valor principal"],
+        ["Fecha", scene.date, "Metadato auxiliar"],
+        ["Latitud", scene.lat.toFixed(4), "Metadato auxiliar"],
+        ["Longitud", scene.lon.toFixed(4), "Metadato auxiliar"],
+        ["Comparación", type === "S2" ? "S2 vs S2DR3" : "PS vs S2DR3", "Valor principal"],
+        ["Banda", band, "Valor principal"],
+        ["Métrica", metric, "Valor principal"]
+      ];
+
+      tabla.innerHTML = `
+        <table data-gjs-name="Data Table" class="min-w-full border-separate border-spacing-0 text-left">
+          <thead data-gjs-name="Table Head" class="sticky top-0 z-10 bg-slate-100">
+            <tr data-gjs-name="Table Row">
+              <th data-gjs-name="Table Header" class="border-b border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Campo</th>
+              <th data-gjs-name="Table Header" class="border-b border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Valor</th>
+              <th data-gjs-name="Table Header" class="border-b border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Categoría</th>
+            </tr>
+          </thead>
+          <tbody data-gjs-name="Table Body" class="bg-white">
+            ${rows.map((row, index) => `
+              <tr data-gjs-name="Table Row" class="${index % 2 === 0 ? 'bg-white' : 'bg-slate-50/70'}">
+                <td data-gjs-name="Table Cell" class="border-b border-slate-200 px-4 py-3 text-sm font-medium text-slate-800">${row[0]}</td>
+                <td data-gjs-name="Table Cell" class="border-b border-slate-200 px-4 py-3 text-sm text-slate-700">${row[1]}</td>
+                <td data-gjs-name="Table Cell" class="border-b border-slate-200 px-4 py-3 text-sm">
+                  <span data-gjs-name="Table Badge" class="inline-flex rounded-full ${row[2] === 'Valor principal' ? 'border border-blue-200 bg-blue-50 text-blue-700' : 'border border-slate-200 bg-slate-100 text-slate-600'} px-3 py-1 text-xs font-semibold">${row[2]}</span>
+                </td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function updateUI() {
+      const { scene, band, type, metric, typeData } = currentPayload();
+      if (!scene || !typeData) return;
+
+      document.getElementById("meta_scene").textContent = scene.id;
+      document.getElementById("meta_date").textContent = scene.date;
+      document.getElementById("meta_type").textContent = type === "S2" ? "S2 vs S2DR3" : "PS vs S2DR3";
+      document.getElementById("meta_band").textContent = band;
+      document.getElementById("meta_metric").textContent = metric;
+
+      fadeUpdate(refImg, scene.reference);
+      fadeUpdate(statsImg, typeData.metrics?.[metric] || "");
+      fadeUpdate(hexImg, typeData.hexbin || "");
+      fadeUpdate(errorImg, typeData.error_map || "");
+      fadeUpdate(plotFrame, typeData.plot_3d || "about:blank");
+
+      updateMap(scene);
+      updateTable(scene, band, type, metric);
+    }
+
+    function attachMediaOpeners() {
+      function openImage(title, src, alt) {
+        modalTitle.textContent = title;
+        modalContent.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain">`;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.classList.add("modal-open");
+      }
+
+      function openFrame(title, src) {
+        modalTitle.textContent = title;
+        modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white"></iframe>`;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.classList.add("modal-open");
+      }
+
+      document.getElementById("open_ref").addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
+      document.getElementById("open_stats").addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
+      document.getElementById("open_hex").addEventListener("click", () => openImage("Hexbin", hexImg.src, "Hexbin"));
+      document.getElementById("open_error").addEventListener("click", () => openImage("Error", errorImg.src, "Error"));
+      document.getElementById("open_plot").addEventListener("click", () => openFrame("Plot interactivo", plotFrame.src));
+
+      refImg.addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
+      statsImg.addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
+      hexImg.addEventListener("click", () => openImage("Hexbin", hexImg.src, "Hexbin"));
+      errorImg.addEventListener("click", () => openImage("Error", errorImg.src, "Error"));
+      plotFrame.addEventListener("click", () => openFrame("Plot interactivo", plotFrame.src));
+
+      document.getElementById("close_modal").addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalContent.innerHTML = "";
+      document.body.classList.remove("modal-open");
+    }
+
+    function bindEvents() {
+      selImg.addEventListener("change", () => {
+        fillBandSelect();
+        updateUI();
+      });
+      selTipo.addEventListener("change", () => {
+        fillBandSelect();
+        updateUI();
+      });
+      selBanda.addEventListener("change", updateUI);
+      selStat.addEventListener("change", updateUI);
+    }
+
+    function startApp(data) {
+      catalogo = Array.isArray(data) && data.length ? data : fallbackCatalog;
+      initMap();
+      fillImageSelect();
+      fillBandSelect();
+      bindEvents();
+      attachMediaOpeners();
+      updateUI();
+    }
+
+    fetch("catalogo_final.json")
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => startApp(data))
+      .catch(() => startApp(fallbackCatalog));
+  </script></body>
+</html>
