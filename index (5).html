@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head id="i2ag">
+    <title id="izptg">Interfaz de resultados</title>
+  <meta charset="UTF-8" id="izpc"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" id="iqvql"/>
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <link rel="preconnect" href="https://fonts.googleapis.com" id="ier7u"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" id="i885m"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Fraunces:wght@600;700&amp;display=swap" rel="stylesheet" id="ikicg"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" id="i0tzm"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js" id="idol1"></script>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .fullscreen-viewer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
+    .fullscreen-viewer img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .fullscreen-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .fullscreen-close-btn:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+  </head>
+  <body id="iuqf" class="gjs-t-body font-body"><div id="i587z" class="page-wrapper"><header id="iaa18" class="dashboard-header"><div id="iju27" class="header-inner"><div id="ir0ee" class="header-title[...]
+    const fallbackCatalog = [
+      {
+        id: "Escena Norte",
+        date: "2024-02-11",
+        lat: -33.45,
+        lon: -70.67,
+        reference: "https://app.grapesjs.com/api/assets/random-image?query=satellite%20farmland%20patchwork&w=900&h=700",
+        bands: {
+          B02: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=scientific%20heatmap%20blue&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=data%20heatmap%20cyan&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=error%20map%20orange&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=terrain%20error%20analysis&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=threshold%20map%20science&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=hexbin%20analysis%20chart&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=remote%20sensing%20error%20plot&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=scientific%20scatter%20blue&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=correlation%20dashboard%20teal&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=analytics%20surface%20orange&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=quantitative%20surface%20chart&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=threshold%20classification%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=hexagonal%20scientific%20visualization&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=distribution%20error%20diagram&w=900&h=600",
+              plot: "https://example.com"
+            }
+          },
+          B03: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=green%20spectral%20analysis&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=statistical%20field%20map&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=residual%20landscape%20map&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=agro%20analytics%20result&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=classification%20zones%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=geospatial%20hexbin%20green&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=error%20density%20green&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=planet%20sensor%20comparison&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=regression%20map%20green&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=rmse%20cartography&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=mae%20analysis%20map&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=threshold%20science%20green&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=green%20hexbin%20stats&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=green%20error%20visual&w=900&h=600",
+              plot: "https://example.com"
+            }
+          }
+        }
+      },
+      {
+        id: "Escena Sur",
+        date: "2024-05-28",
+        lat: -36.82,
+        lon: -73.05,
+        reference: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20satellite%20imagery&w=900&h=700",
+        bands: {
+          B04: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=red%20band%20analysis%20map&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=red%20correlation%20surface&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=marine%20rmse%20map&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=marine%20mae%20map&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20threshold%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=red%20hexbin%20coast&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=marine%20error%20chart&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20regression%20dashboard&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20correlation%20map&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20rmse%20dashboard&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20mae%20dashboard&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20threshold%20dashboard&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=coastal%20hexagonal%20analysis&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=ocean%20error%20density&w=900&h=600",
+              plot: "https://example.com"
+            }
+          },
+          B08: {
+            S2: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=nir%20analysis%20remote%20sensing&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=nir%20correlation%20map&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20rmse%20surface&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20mae%20surface&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=nir%20threshold%20map&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=nir%20hexbin%20scientific&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=nir%20residual%20distribution&w=900&h=600",
+              plot: "https://example.com"
+            },
+            PS: {
+              stats: {
+                R: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20analysis&w=1200&h=800",
+                R2: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20correlation&w=1200&h=800",
+                RMSE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20rmse&w=1200&h=800",
+                MAE: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20mae&w=1200&h=800",
+                umbral: "https://app.grapesjs.com/api/assets/random-image?query=nir%20planet%20threshold&w=1200&h=800"
+              },
+              hex: "https://app.grapesjs.com/api/assets/random-image?query=infrared%20hexbin%20chart&w=900&h=600",
+              error: "https://app.grapesjs.com/api/assets/random-image?query=infrared%20error%20chart&w=900&h=600",
+              plot: "https://example.com"
+            }
+          }
+        }
+      }
+    ];
+
+    let catalogo = [];
+    let map;
+    let currentMarker = null;
+
+    const selImg = document.getElementById("imagen");
+    const selTipo = document.getElementById("tipo");
+    const selBanda = document.getElementById("banda");
+    const selStat = document.getElementById("stat_type");
+    const refImg = document.getElementById("ref");
+    const statsImg = document.getElementById("stats_img");
+    const hexImg = document.getElementById("hex");
+    const errorImg = document.getElementById("error");
+    const plotFrame = document.getElementById("plot");
+    const tabla = document.getElementById("tabla");
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modal_content");
+    const modalTitle = document.getElementById("modal_title");
+
+    function fadeUpdate(element, newSrc) {
+      element.classList.add("fade-out");
+      setTimeout(() => {
+        if (element.tagName === "IFRAME") {
+          element.src = newSrc || "";
+        } else {
+          element.src = newSrc || "";
+        }
+        element.classList.remove("fade-out");
+      }, 180);
+    }
+
+    function initMap() {
+      map = L.map('map', { zoomControl: true }).setView([-35, -71], 5);
+      L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+    }
+
+    function fillImageSelect() {
+      selImg.innerHTML = "";
+      catalogo.forEach((item, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = item.id;
+        selImg.appendChild(option);
+      });
+    }
+
+    function fillBandSelect() {
+  const scene = currentScene();
+  const type = selTipo.value;
+
+  selBanda.innerHTML = "";
+
+  const bandKeys = Object.keys(scene.bands || {});
+
+  bandKeys.forEach(band => {
+    const bandData = scene.bands[band];
+
+    if (bandData.comparisons && bandData.comparisons[type]) {
+      const option = document.createElement("option");
+      option.value = band;
+      option.textContent = band.replaceAll("_", " ");
+      selBanda.appendChild(option);
+    }
+  });
+}
+
+    function currentScene() {
+      return catalogo[Number(selImg.value)] || catalogo[0];
+    }
+
+    function currentPayload() {
+  const scene = currentScene();
+  const band = selBanda.value;
+  const type = selTipo.value;
+  const metric = selStat.value;
+
+  const bandData = scene?.bands?.[band];
+  const typeData = bandData?.comparisons?.[type];
+
+  return { scene, band, type, metric, bandData, typeData };
+}
+
+    function updateMap(scene) {
+      const lat = scene.lat;
+      const lon = scene.lon;
+      document.getElementById("meta_lat").textContent = lat.toFixed(4);
+      document.getElementById("meta_lon").textContent = lon.toFixed(4);
+
+      if (currentMarker) {
+        map.removeLayer(currentMarker);
+      }
+
+      currentMarker = L.marker([lat, lon]).addTo(map);
+      currentMarker.bindPopup(`<strong>${scene.id}</strong><br>${scene.date}`).openPopup();
+      map.setView([lat, lon], 8);
+      setTimeout(() => map.invalidateSize(), 250);
+    }
+
+    function updateTable(scene, band, type, metric) {
+      const rows = [
+        ["Escena", scene.id, "Valor principal"],
+        ["Fecha", scene.date, "Metadato auxiliar"],
+        ["Latitud", scene.lat.toFixed(4), "Metadato auxiliar"],
+        ["Longitud", scene.lon.toFixed(4), "Metadato auxiliar"],
+        ["Comparación", type === "S2" ? "S2 vs S2DR3" : "PS vs S2DR3", "Valor principal"],
+        ["Banda", band, "Valor principal"],
+        ["Métrica", metric, "Valor principal"]
+      ];
+
+      tabla.innerHTML = `
+        <table data-gjs-name="Data Table" class="min-w-full border-separate border-spacing-0 text-left">
+          <thead data-gjs-name="Table Head" class="sticky top-0 z-10 bg-slate-100">
+            <tr data-gjs-name="Table Row">
+              <th data-gjs-name="Table Header" class="border-b border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Campo</th>
+              <th data-gjs-name="Table Header" class="border-b border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Valor</th>
+              <th data-gjs-name="Table Header" class="border-b border-slate-200 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Categoría</th>
+            </tr>
+          </thead>
+          <tbody data-gjs-name="Table Body" class="bg-white">
+            ${rows.map((row, index) => `
+              <tr data-gjs-name="Table Row" class="${index % 2 === 0 ? 'bg-white' : 'bg-slate-50/70'}">
+                <td data-gjs-name="Table Cell" class="border-b border-slate-200 px-4 py-3 text-sm font-medium text-slate-800">${row[0]}</td>
+                <td data-gjs-name="Table Cell" class="border-b border-slate-200 px-4 py-3 text-sm text-slate-700">${row[1]}</td>
+                <td data-gjs-name="Table Cell" class="border-b border-slate-200 px-4 py-3 text-sm">
+                  <span data-gjs-name="Table Badge" class="inline-flex rounded-full ${row[2] === 'Valor principal' ? 'border border-blue-200 bg-blue-50 text-blue-700' : 'border border-slate-200 bg-sla[...]
+                </td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function updateUI() {
+      const { scene, band, type, metric, typeData } = currentPayload();
+      if (!scene || !typeData) return;
+
+      document.getElementById("meta_scene").textContent = scene.id;
+      document.getElementById("meta_date").textContent = scene.date;
+      document.getElementById("meta_type").textContent = type === "S2" ? "S2 vs S2DR3" : "PS vs S2DR3";
+      document.getElementById("meta_band").textContent = band;
+      document.getElementById("meta_metric").textContent = metric;
+
+      fadeUpdate(refImg, scene.reference);
+      fadeUpdate(statsImg, typeData.metrics?.[metric] || "");
+      fadeUpdate(hexImg, typeData.hexbin || "");
+      fadeUpdate(errorImg, typeData.error_map || "");
+      fadeUpdate(plotFrame, typeData.plot_3d || "about:blank");
+
+      updateMap(scene);
+      updateTable(scene, band, type, metric);
+    }
+
+    function openFullscreen(src, alt) {
+      if (!src || src === "") return;
+      
+      const fullscreenViewer = document.createElement("div");
+      fullscreenViewer.className = "fullscreen-viewer";
+      fullscreenViewer.innerHTML = `
+        <button class="fullscreen-close-btn" title="Cerrar (ESC)">&times;</button>
+        <img src="${src}" alt="${alt}" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+      `;
+      
+      document.body.appendChild(fullscreenViewer);
+      
+      function closeFullscreen() {
+        fullscreenViewer.remove();
+      }
+      
+      fullscreenViewer.addEventListener("click", closeFullscreen);
+      fullscreenViewer.querySelector(".fullscreen-close-btn").addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeFullscreen();
+      });
+      
+      document.addEventListener("keydown", function handleEsc(e) {
+        if (e.key === "Escape") {
+          closeFullscreen();
+          document.removeEventListener("keydown", handleEsc);
+        }
+      });
+    }
+
+    function attachMediaOpeners() {
+      function openImage(title, src, alt) {
+        modalTitle.textContent = title;
+        modalContent.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain">`;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.classList.add("modal-open");
+      }
+
+      function openFrame(title, src) {
+        modalTitle.textContent = title;
+        modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white"></iframe>`;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.classList.add("modal-open");
+      }
+
+      // Botones de zoom abren pantalla completa
+      const openRefBtn = document.getElementById("open_ref");
+      const openStatsBtn = document.getElementById("open_stats");
+      const openHexBtn = document.getElementById("open_hex");
+      const openErrorBtn = document.getElementById("open_error");
+      const openPlotBtn = document.getElementById("open_plot");
+
+      if (openRefBtn) openRefBtn.addEventListener("click", () => openFullscreen(refImg.src, "Imagen de referencia"));
+      if (openStatsBtn) openStatsBtn.addEventListener("click", () => openFullscreen(statsImg.src, "Resultados generales"));
+      if (openHexBtn) openHexBtn.addEventListener("click", () => openFullscreen(hexImg.src, "Hexbin"));
+      if (openErrorBtn) openErrorBtn.addEventListener("click", () => openFullscreen(errorImg.src, "Error"));
+      if (openPlotBtn) openPlotBtn.addEventListener("click", () => openFrame("Plot interactivo", plotFrame.src));
+
+      // Click en las imágenes abre el modal normal
+      if (refImg) refImg.addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
+      if (statsImg) statsImg.addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
+      if (hexImg) hexImg.addEventListener("click", () => openImage("Hexbin", hexImg.src, "Hexbin"));
+      if (errorImg) errorImg.addEventListener("click", () => openImage("Error", errorImg.src, "Error"));
+      if (plotFrame) plotFrame.addEventListener("click", () => openFrame("Plot interactivo", plotFrame.src));
+
+      const closeModalBtn = document.getElementById("close_modal");
+      if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
+      
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+      
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+    }
+
+    function closeModal() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalContent.innerHTML = "";
+      document.body.classList.remove("modal-open");
+    }
+
+    function bindEvents() {
+      selImg.addEventListener("change", () => {
+        fillBandSelect();
+        updateUI();
+      });
+      selTipo.addEventListener("change", () => {
+        fillBandSelect();
+        updateUI();
+      });
+      selBanda.addEventListener("change", updateUI);
+      selStat.addEventListener("change", updateUI);
+    }
+
+    function startApp(data) {
+      catalogo = Array.isArray(data) && data.length ? data : fallbackCatalog;
+      initMap();
+      fillImageSelect();
+      fillBandSelect();
+      bindEvents();
+      attachMediaOpeners();
+      updateUI();
+    }
+
+    fetch("catalogo_final.json")
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => startApp(data))
+      .catch(() => startApp(fallbackCatalog));
+  </script></body>
+</html>
