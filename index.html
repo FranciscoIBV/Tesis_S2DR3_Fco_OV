@@ -292,22 +292,61 @@
       updateTable(scene, band, type, metric);
     }
 
-    function attachMediaOpeners() {
-      function openImage(title, src, alt) {
-        modalTitle.textContent = title;
-        modalContent.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain">`;
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-        document.body.classList.add("modal-open");
-      }
+function attachMediaOpeners() {
+  function openImage(title, src, alt) {
+    modalTitle.textContent = title;
+    const imgContainer = document.createElement("div");
+    imgContainer.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain" style="cursor: pointer;">`;
+    const img = imgContainer.querySelector("img");
+    
+    img.addEventListener("click", () => {
+      const fullscreenElement = document.createElement("div");
+      fullscreenElement.className = "fullscreen-container";
+      fullscreenElement.innerHTML = `<img src="${src}" alt="${alt || title}" style="cursor: pointer;">`;
+      fullscreenElement.querySelector("img").addEventListener("click", () => {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+      });
+      document.body.appendChild(fullscreenElement);
+      fullscreenElement.requestFullscreen().catch(err => {
+        fullscreenElement.remove();
+        console.error("No se pudo activar pantalla completa:", err);
+      });
+    });
+    
+    modalContent.innerHTML = "";
+    modalContent.appendChild(imgContainer);
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("modal-open");
+  }
 
-      function openFrame(title, src) {
-        modalTitle.textContent = title;
-        modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white"></iframe>`;
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-        document.body.classList.add("modal-open");
-      }
+  function openFrame(title, src) {
+    modalTitle.textContent = title;
+    modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white" style="cursor: pointer;"></iframe>`;
+    const iframe = modalContent.querySelector("iframe");
+    
+    iframe.addEventListener("click", () => {
+      const fullscreenElement = document.createElement("div");
+      fullscreenElement.className = "fullscreen-container";
+      fullscreenElement.innerHTML = `<iframe src="${src}" title="${title}" style="border: none;"></iframe>`;
+      fullscreenElement.querySelector("iframe").addEventListener("click", () => {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+      });
+      document.body.appendChild(fullscreenElement);
+      fullscreenElement.requestFullscreen().catch(err => {
+        fullscreenElement.remove();
+        console.error("No se pudo activar pantalla completa:", err);
+      });
+    });
+    
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("modal-open");
+  }
 
       document.getElementById("open_ref").addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
       document.getElementById("open_stats").addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
