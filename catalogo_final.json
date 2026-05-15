@@ -1,9 +1,9 @@
 [
   {
-    "id": "Imagen_1",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 1",
+    "date": "19-02-2024",
+    "lat": -40.8777813,
+    "lon": -71.6761356,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_1/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -289,10 +289,10 @@
     }
   },
   {
-    "id": "Imagen_2",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 2",
+    "date": "21-12-2024",
+    "lat": -18.643703,
+    "lon": -69.679099,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_2/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -578,10 +578,10 @@
     }
   },
   {
-    "id": "Imagen_3",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 3",
+    "date": "19-12-2023",
+    "lat": -43.120187,
+    "lon": -72.450603,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_3/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -867,10 +867,10 @@
     }
   },
   {
-    "id": "Imagen_4",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 4",
+    "date": "13-01-2024",
+    "lat": -37.088454,
+    "lon": -72.962257,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_4/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -1156,10 +1156,10 @@
     }
   },
   {
-    "id": "Imagen_5",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 5",
+    "date": "12-02-2024",
+    "lat": -36.416355,
+    "lon": -72.112929,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_5/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -1445,10 +1445,10 @@
     }
   },
   {
-    "id": "Imagen_6",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 6",
+    "date": "02-02-2024",
+    "lat": -36.910258,
+    "lon": -73.099849,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_6/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -1734,10 +1734,10 @@
     }
   },
   {
-    "id": "Imagen_7",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 7",
+    "date": "23-01-2024",
+    "lat": -37.723006,
+    "lon": -72.969386,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_7/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -2023,10 +2023,10 @@
     }
   },
   {
-    "id": "Imagen_8",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 8",
+    "date": "25-10-2023",
+    "lat": -40.6789,
+    "lon": -73.180547,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_8/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -2312,10 +2312,10 @@
     }
   },
   {
-    "id": "Imagen_9",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 9",
+    "date": "09-02-2024",
+    "lat": -41.105655,
+    "lon": -72.530624,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_9/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -2601,10 +2601,10 @@
     }
   },
   {
-    "id": "Imagen_10",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 10",
+    "date": "20-01-2024",
+    "lat": -43.870125,
+    "lon": -71.907841,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_10/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -2890,10 +2890,10 @@
     }
   },
   {
-    "id": "Imagen_11",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 11",
+    "date": "21-12-2024",
+    "lat": -19.48227,
+    "lon": -69.427082,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_11/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -3179,10 +3179,10 @@
     }
   },
   {
-    "id": "Imagen_12",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 12",
+    "date": "18-12-2024",
+    "lat": -27.469084,
+    "lon": -69.366691,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_12/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -3468,10 +3468,10 @@
     }
   },
   {
-    "id": "Imagen_13",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 13",
+    "date": "19-06-2024",
+    "lat": -18.168212,
+    "lon": -69.159562,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_13/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -3757,10 +3757,10 @@
     }
   },
   {
-    "id": "Imagen_14",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 14",
+    "date": "29-07-2024",
+    "lat": -18.411097,
+    "lon": -69.081355,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_14/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -4046,10 +4046,10 @@
     }
   },
   {
-    "id": "Imagen_15",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 15",
+    "date": "01-08-2022",
+    "lat": -19.752223,
+    "lon": -68.704722,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_15/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -4335,10 +4335,10 @@
     }
   },
   {
-    "id": "Imagen_16",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 16",
+    "date": "06-07-2024",
+    "lat": -28.541381,
+    "lon": -69.730357,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_16/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -4624,10 +4624,10 @@
     }
   },
   {
-    "id": "Imagen_17",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 17",
+    "date": "07-02-2024",
+    "lat": -34.9998985,
+    "lon": -71.0266915,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_17/Imagen_referencia.png",
     "bands": {
       "B02": {
@@ -4913,10 +4913,10 @@
     }
   },
   {
-    "id": "Imagen_18",
-    "date": "",
-    "lat": 0,
-    "lon": 0,
+    "id": "Imagen 18",
+    "date": "12-02-2024",
+    "lat": -35.278409,
+    "lon": -71.550389,
     "reference": "https://storage.googleapis.com/tesis_s2dr3/Archivos_Subida/Imagen_18/Imagen_referencia.png",
     "bands": {
       "B02": {
