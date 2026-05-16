@@ -458,83 +458,60 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
       updateMap(scene);
       updateTable(scene, band, type, metric);
     }
-
 function attachMediaOpeners() {
-  function openImage(title, src, alt) {
+  const modal = document.getElementById("modal");
+  const modalContent = document.getElementById("modal_content");
+  const modalTitle = document.getElementById("modal_title");
+
+  // Tarea: Prioridad visual (Capa 9999 para que no lo tape el header)
+  modal.style.setProperty('z-index', '9999', 'important');
+  modal.style.setProperty('position', 'fixed', 'important');
+
+  // Función limpia para abrir imágenes
+  function openImage(title, src) {
     modalTitle.textContent = title;
-    const imgContainer = document.createElement("div");
-    imgContainer.innerHTML = `<img data-gjs-name="Modal Image" src="${src}" alt="${alt || title}" class="max-h-[78vh] w-full rounded-2xl object-contain" style="cursor: pointer;">`;
-    const img = imgContainer.querySelector("img");
+    modalContent.innerHTML = ""; // Tarea: Limpieza total para evitar acumulación
     
-    img.addEventListener("click", () => {
-      const fullscreenElement = document.createElement("div");
-      fullscreenElement.className = "fullscreen-container";
-      fullscreenElement.innerHTML = `<img src="${src}" alt="${alt || title}" style="cursor: pointer;">`;
-      fullscreenElement.querySelector("img").addEventListener("click", () => {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        }
-      });
-      document.body.appendChild(fullscreenElement);
-      fullscreenElement.requestFullscreen().catch(err => {
-        fullscreenElement.remove();
-        console.error("No se pudo activar pantalla completa:", err);
-      });
-    });
+    const img = document.createElement("img");
+    img.src = src;
+    // Tarea: Ajuste de encuadre perfecto
+    img.className = "max-h-[75vh] w-auto mx-auto rounded-2xl object-contain shadow-2xl";
     
-    modalContent.innerHTML = "";
-    modalContent.appendChild(imgContainer);
+    modalContent.appendChild(img);
+    modal.style.display = "flex";
     modal.classList.remove("hidden");
-    modal.classList.add("flex");
-    document.body.classList.add("modal-open");
+    document.body.style.overflow = "hidden"; // Bloquea el scroll de fondo
   }
 
+  // Función limpia para abrir los plots (gráficos 3D)
   function openFrame(title, src) {
     modalTitle.textContent = title;
-    modalContent.innerHTML = `<iframe data-gjs-name="Modal Iframe" src="${src}" title="${title}" class="h-[78vh] w-full rounded-2xl bg-white" style="cursor: pointer;"></iframe>`;
-    const iframe = modalContent.querySelector("iframe");
-    
-    iframe.addEventListener("click", () => {
-      const fullscreenElement = document.createElement("div");
-      fullscreenElement.className = "fullscreen-container";
-      fullscreenElement.innerHTML = `<iframe src="${src}" title="${title}" style="border: none;"></iframe>`;
-      fullscreenElement.querySelector("iframe").addEventListener("click", () => {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        }
-      });
-      document.body.appendChild(fullscreenElement);
-      fullscreenElement.requestFullscreen().catch(err => {
-        fullscreenElement.remove();
-        console.error("No se pudo activar pantalla completa:", err);
-      });
-    });
-    
+    modalContent.innerHTML = `<iframe src="${src}" class="h-[75vh] w-full rounded-2xl bg-white border-none shadow-2xl"></iframe>`;
+    modal.style.display = "flex";
     modal.classList.remove("hidden");
-    modal.classList.add("flex");
-    document.body.classList.add("modal-open");
+    document.body.style.overflow = "hidden";
   }
 
-      document.getElementById("open_ref").addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
-      document.getElementById("open_stats").addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
-      document.getElementById("open_hex").addEventListener("click", () => openImage("Hexbin", hexImg.src, "Hexbin"));
-      document.getElementById("open_error").addEventListener("click", () => openImage("Error", errorImg.src, "Error"));
-      document.getElementById("open_plot").addEventListener("click", () => openFrame("Plot interactivo", plotFrame.src));
+  function closeModal() {
+    modal.style.display = "none";
+    modal.classList.add("hidden");
+    modalContent.innerHTML = ""; // Tarea: Limpiar al cerrar
+    document.body.style.overflow = ""; // Devuelve el scroll
+  }
 
-      refImg.addEventListener("click", () => openImage("Imagen de referencia", refImg.src, "Imagen de referencia"));
-      statsImg.addEventListener("click", () => openImage("Resultados generales", statsImg.src, "Resultados generales"));
-      hexImg.addEventListener("click", () => openImage("Hexbin", hexImg.src, "Hexbin"));
-      errorImg.addEventListener("click", () => openImage("Error", errorImg.src, "Error"));
-      plotFrame.addEventListener("click", () => openFrame("Plot interactivo", plotFrame.src));
+  // --- CONEXIÓN DE BOTONES (Sin interferencias) ---
+  document.getElementById("open_ref").onclick = () => openImage("Imagen de referencia", document.getElementById("ref").src);
+  document.getElementById("open_stats").onclick = () => openImage("Resultados generales", document.getElementById("stats_img").src);
+  document.getElementById("open_hex").onclick = () => openImage("Hexbin", document.getElementById("hex").src);
+  document.getElementById("open_error").onclick = () => openImage("Error", document.getElementById("error").src);
+  document.getElementById("open_plot").onclick = () => openFrame("Plot interactivo", document.getElementById("plot").src);
 
-      document.getElementById("close_modal").addEventListener("click", closeModal);
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) closeModal();
-      });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
-    }
+  // --- BOTONES DE CIERRE Y TECLADO ---
+  document.getElementById("close_modal").onclick = closeModal;
+  modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+  document.onkeydown = (e) => { if (e.key === "Escape") closeModal(); };
+}
+
 
     function closeModal() {
       modal.classList.add("hidden");
