@@ -486,7 +486,9 @@ function attachMediaOpeners() {
   // Función limpia para abrir los plots (gráficos 3D)
   function openFrame(title, src) {
     modalTitle.textContent = title;
-    modalContent.innerHTML = `<iframe src="${src}" class="h-[75vh] w-full rounded-2xl bg-white border-none shadow-2xl"></iframe>`;
+    // Hemos añadido "w-full" y el estilo "width: 100%" para que ocupe todo el ancho
+    modalContent.innerHTML = `<iframe src="${src}" class="w-full h-[75vh] rounded-2xl bg-white border-none shadow-2xl" style="width: 100%; min-height: 75vh;"></iframe>`;
+    
     modal.style.display = "flex";
     modal.classList.remove("hidden");
     document.body.style.overflow = "hidden";
